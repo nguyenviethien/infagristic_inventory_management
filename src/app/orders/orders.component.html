@@ -1,0 +1,66 @@
+<div class="column-layout group">
+  <div class="column-layout group_1">
+    <div class="row-layout group_2">
+      <h6 class="h6">
+        Orders
+      </h6>
+      <div class="row-layout group_3">
+        <button igxButton="contained" igxRipple class="button">
+          <igx-icon class="icon">
+            add
+          </igx-icon>
+          <span>New Order</span>
+        </button>
+        <button igxButton="outlined" igxRipple class="button_1">
+          <igx-icon>
+            picture_as_pdf
+          </igx-icon>
+          <span>Download PDF</span>
+        </button>
+        <button igxButton="outlined" igxRipple class="button_1">
+          <igx-icon>
+            print
+          </igx-icon>
+          <span>Print</span>
+        </button>
+      </div>
+    </div>
+    <div class="row-layout group_4">
+      <div class="row-layout group_5">
+        <igx-input-group type="box" class="input">
+          <igx-prefix>
+            <igx-icon class="icon_1">
+              search
+            </igx-icon>
+          </igx-prefix>
+          <input type="text" igxInput />
+          <label igxLabel>Search orders</label>
+        </igx-input-group>
+        <button igxButton="outlined" igxRipple class="button_1">
+          <igx-icon>
+            filter_alt
+          </igx-icon>
+          <span>Filter</span>
+        </button>
+      </div>
+    </div>
+    <div class="row-layout group_6">
+      <igx-grid [data]="northwindOrders" primaryKey="employeeID" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+        <igx-column field="orderID" dataType="number" header="orderID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="customerID" dataType="string" header="customerID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="employeeID" dataType="number" header="employeeID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="orderDate" dataType="date" header="orderDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="requiredDate" dataType="date" header="requiredDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shippedDate" dataType="date" header="shippedDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipVia" dataType="number" header="shipVia" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="freight" dataType="number" header="freight" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipName" dataType="string" header="shipName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipAddress.street" dataType="string" header="street" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipAddress.city" dataType="string" header="city" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipAddress.region" dataType="string" header="region" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipAddress.postalCode" dataType="string" header="postalCode" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="shipAddress.country" dataType="string" header="country" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      </igx-grid>
+    </div>
+  </div>
+</div>
